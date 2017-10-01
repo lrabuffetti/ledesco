@@ -1,0 +1,71 @@
+.page-holder {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.logo {
+  background-image: url('../assets/logo_ledesco.png');
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.input-group {
+  margin-top: 10px;
+}
+
+.navigation-bar {
+  background-color: #4d654a;
+}
+
+.navigation-item {
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.navigation-item:hover {
+  color: #000;
+}
+
+.vertical-divider {
+  border-right: 1px solid #FFF;
+}
+
+.green-divider {
+  height: 20px;
+  background-color: #253b48;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.main-content-holder {
+  border-right: 10px solid #253b48;
+}
+
+.financiacion-holder {
+  background-image: url('../assets/home/financiacion.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 500px;
+  background-position-x: 90%;
+}
+
+
+/**
+ * for mobile devices
+ */
+
+@media only screen and (max-width: 768px) {
+  .vertical-divider {
+    border-right: none;
+    border-bottom: 1px solid #FFF;
+  }
+  .main-content-holder {
+    border: none;
+  }
+  .financiacion-holder {
+    display: none;
+  }
+}
