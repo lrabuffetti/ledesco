@@ -23,6 +23,17 @@
   text-transform: uppercase;
 }
 
+.navigation-list {
+  display: table;
+  width: 100%;
+}
+
+.navigation-list li {
+  display: table-cell;
+  float: none;
+  text-align: center;
+}
+
 .navigation-item:hover {
   color: #000;
 }
@@ -67,5 +78,14 @@
   }
   .financiacion-holder {
     display: none;
+  }
+  .navigation-list {
+    display: block;
+  }
+  .navigation-list li {
+    display: block;
+    float: left;
+    width: 100%;
+    text-align: left;
   }
 }

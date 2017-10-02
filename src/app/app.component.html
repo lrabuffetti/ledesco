@@ -15,13 +15,11 @@
   <div class="main-content-holder col-md-12 col-xs-12">
 
     <nav class="navbar navigation-bar col-md-12 col-xs-12">
-      <div class="container-fluid">
-        <ul class="navbar-nav nav">
-          <li *ngFor="let item of navigationItems; let last = last" [ngClass]="{ 'vertical-divider' : !last }">
-            <a class="navigation-item" href="{{item.link}}">{{item.title}}</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="navbar-nav nav navigation-list">
+        <li *ngFor="let item of navigationItems; let last = last" [ngClass]="{ 'vertical-divider' : !last }">
+          <a class="navigation-item" href="{{item.link}}">{{item.title}}</a>
+        </li>
+      </ul>
     </nav>
     <div class="green-divider col-md-12 col-xs-12">
 
