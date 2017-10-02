@@ -1,0 +1,8 @@
+<nav class="navbar navigation-bar col-md-12 col-xs-12">
+  <ul class="navbar-nav nav navigation-list">
+    <li *ngFor="let item of navigationItems; let last = last" [ngClass]="{ 'vertical-divider' : !last }">
+      <a class="navigation-item" href="{{item.link}}">{{item.title}}</a>
+    </li>
+  </ul>
+</nav>
+<div class="green-divider col-md-12 col-xs-12"></div>

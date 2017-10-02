@@ -1,0 +1,10 @@
+.logo {
+  background-image: url('../../assets/logo_ledesco.png');
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.input-group {
+  margin-top: 10px;
+}
