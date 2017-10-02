@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
 
+## Tools you need for running the project
+
+* [Create a free github account](https://github.com/)
+* [Gitbub for windows](https://desktop.github.com/)
+* [NodeJs and NPM for windows](https://nodejs.org/es/download/)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
