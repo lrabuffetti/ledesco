@@ -8,6 +8,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * [Gitbub for windows](https://desktop.github.com/)
 * [NodeJs and NPM for windows](https://nodejs.org/es/download/)
 
+## After installation steps
+
+* clone the repo: [https://github.com/lrabuffetti/ledesco](https://github.com/lrabuffetti/ledesco) on the github for windows tool
+
+* open a console on the location path *default path should be Documents/My Github/ledesco* and run **npm install**
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
