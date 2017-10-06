@@ -1,0 +1,14 @@
+.empresa-holder {
+  color: #FFF;
+  background-color: #5c7157;
+  min-height: 250px;
+  padding-top: 25px;
+}
+
+.compromiso-holder {
+  background-image: url('../../assets/home/financiado.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 500px;
+  background-position-x: 90%;
+}

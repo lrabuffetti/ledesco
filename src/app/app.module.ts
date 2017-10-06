@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -12,6 +13,8 @@ import { FinanciacionComponent } from './financiacion/financiacion.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { ContactComponent } from './contact/contact.component';
+
+import { AppRoutingModule } from './app-routing'
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

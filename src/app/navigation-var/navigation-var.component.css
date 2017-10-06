@@ -7,6 +7,12 @@
   text-transform: uppercase;
 }
 
+.navigation-item:hover {
+  color: #FFF;
+  text-transform: uppercase;
+  background-color: #82947d;
+}
+
 .navigation-list {
   display: table;
   width: 100%;
@@ -31,4 +37,31 @@
   background-color: #253b48;
   border-radius: 5px;
   margin-bottom: 40px;
+}
+
+.dropdown-menu {
+  background-color: #4d654a;
+}
+
+.navigation-item.dropdown:hover .dropdown-menu {
+  display: block;
+  top: 97%;
+}
+
+.navigation-item.dropdown .dropdown-menu li {
+  display: block;
+  text-align: left;
+}
+
+.navigation-item.dropdown .dropdown-menu li.border-bottom {
+  border-bottom: 1px solid #FFF;
+}
+
+.navigation-item.dropdown .dropdown-menu li a {
+  color: #FFF;
+}
+
+.navigation-item.dropdown .dropdown-menu li a:hover {
+  background-color: #82947d;
+  color: #333;
 }
