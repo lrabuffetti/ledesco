@@ -30,7 +30,7 @@ export class NavigationVarComponent implements OnInit {
     {
       title: 'casas',
       link: '/casas',
-      search_id: 'casas, modelos, construcciones, planos, ejemplos, viviendas, barrios'
+      search_id: 'casas, modelos, construcciones, planos, ejemplos, viviendas, barrios',
     },
     {
       title: 'financiacion',
@@ -52,6 +52,21 @@ export class NavigationVarComponent implements OnInit {
       link: '/contacto',
       search_id: 'contacto, telefono, mail, direccion, donde, estamos'
     }
+  ]
+
+  subMenu = [
+    {
+      title: 'proyectos',
+      link: '/casas/proyectos',
+    },
+    {
+      title: 'casa propia',
+      link: '/casas/casa-propia',
+    },
+    {
+      title: 'barrio',
+      link: '/casas/barrio',
+    },
   ]
   constructor() {
   }

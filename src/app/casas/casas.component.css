@@ -1,0 +1,30 @@
+.show-info {
+  position: relative;
+}
+
+.show-info .hiden-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 200px;
+  background-color: #51626d;
+  opacity: 0.9;
+  color: #FFF;
+  padding: 10px;
+  display: none;
+}
+
+.show-info:hover .hiden-info {
+  display: block;
+}
+
+.center-pagination {
+  margin: 0 auto;
+  width: 25%;
+  display: block;
+  height: 80px;
+}
+
+.cursor {
+  cursor: pointer;
+}

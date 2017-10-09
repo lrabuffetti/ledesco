@@ -5,9 +5,9 @@
       <a *ngIf="item.title === 'casas'" class="navigation-item dropdown" href="{{item.link}}">
         <span class="dropdown-toggle" data-toggle="dropdown">{{item.title}}</span>
         <ul class="dropdown-menu">
-          <li class="border-bottom"><a href="#">proyectos</a></li>
-          <li class="border-bottom"><a href="#">casa propia</a></li>
-          <li><a href="#">barrio</a></li>
+          <li *ngFor="let subItem of subMenu; let lItem = last" [ngClass]="{'border-bottom' : !lItem}">
+            <a href="{{subItem.link}}">{{subItem.title}}</a>
+          </li>
         </ul>
       </a>
     </li>
