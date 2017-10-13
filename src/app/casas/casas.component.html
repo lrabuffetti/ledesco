@@ -1,19 +1,21 @@
 <div class="col-md-12 ol-xs-12">
   <ul class="pagination center-pagination">
-    <li *ngFor="let paginationItem of paginationItems; let i = index">
-      <span class="cursor" (click)="setFolder(i)">{{i + 1}}</span>
+    <li *ngFor="let paginationItem of proyectosData; let i = index">
+      <span [ngClass]="{'active' : i === pageId}" class="cursor" (click)="setFolder(i)">{{i + 1}}</span>
     </li>
   </ul>
 </div>
-<div class="col-md-12 col-xs-12">
-  <div class="col-md-6 col-xs-12 show-info">
-    <img class="col-md-12" src="{{planoSrc}}" alt="pano de una casa">
-    <div class="hiden-info">
-      <p>
-        {{firsText}}
-      </p>
-      <p>{{secondText}}</p>
+<div *ngFor="let proyecto of proyectosData; let i = index">
+  <div class="col-md-12 col-xs-12" *ngIf="pageId === i">
+    <div class="col-md-6 col-xs-12 show-info">
+      <img class="col-md-12" src="{{proyecto.planoSrc}}" alt="pano de una casa">
+      <div class="hiden-info">
+        <p>
+          {{proyecto.firsText}}
+        </p>
+        <p>{{proyecto.secondText}}</p>
+      </div>
     </div>
+    <carousel class="col-md-6 col-xs-12" [items]="proyecto.imagesSource"></carousel>
   </div>
-  <carousel class="col-md-6 col-xs-12" [items]="imagesSource"></carousel>
 </div>

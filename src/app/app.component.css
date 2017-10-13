@@ -5,6 +5,12 @@
 
 .main-content-holder {
   border-right: 10px solid #253b48;
+  padding-bottom: 25px;
+}
+
+footer {
+  background-color: #253b48;
+  height: 25px;
 }
 
 /**

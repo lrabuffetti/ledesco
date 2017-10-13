@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -14,6 +15,8 @@ import { FinanciacionComponent } from './financiacion/financiacion.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { ContactComponent } from './contact/contact.component';
+
+import { CasasServiceService } from './casas/casas-service.service';
 
 import { AppRoutingModule } from './app-routing'
 
@@ -35,8 +38,11 @@ import { AppRoutingModule } from './app-routing'
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [
+    CasasServiceService,
+  ],
   bootstrap: [AppComponent]
 })
 
