@@ -12,7 +12,7 @@ export class NavItem {
 @Component({
   selector: 'navigation-bar',
   templateUrl: './navigation-var.component.html',
-  styleUrls: ['./navigation-var.component.css']
+  styleUrls: ['./navigation-var.component.css', '../app.component.css']
 })
 export class NavigationVarComponent implements OnInit {
 

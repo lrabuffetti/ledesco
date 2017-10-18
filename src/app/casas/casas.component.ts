@@ -6,11 +6,13 @@ import { CasasServiceService } from './casas-service.service'
 @Component({
   selector: 'app-casas',
   templateUrl: './casas.component.html',
-  styleUrls: ['./casas.component.css']
+  styleUrls: ['./casas.component.css', '../app.component.css']
 })
 export class CasasComponent implements OnInit {
   pageId = 0;
   proyectosData: any;
+  pageSection = ''
+  casasData: any;
 
   setFolder(index) {
     this.pageId = index;
@@ -19,10 +21,18 @@ export class CasasComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private casasServiceService: CasasServiceService) { }
 
   ngOnInit() {
+    this.pageSection = this.activatedRoute.snapshot.params.id;
     if (this.activatedRoute.snapshot.params.id === 'proyectos') {
       this.casasServiceService.getProyectos().subscribe(
         data => {
           this.proyectosData = data;
+        }
+      );
+    }
+    if (this.activatedRoute.snapshot.params.id === 'casa-propia') {
+      this.casasServiceService.getCasas().subscribe(
+        data => {
+          this.casasData = data;
         }
       );
     }

@@ -1,21 +1,37 @@
-<div class="col-md-12 ol-xs-12">
-  <ul class="pagination center-pagination">
-    <li *ngFor="let paginationItem of proyectosData; let i = index">
-      <span [ngClass]="{'active' : i === pageId}" class="cursor" (click)="setFolder(i)">{{i + 1}}</span>
-    </li>
-  </ul>
-</div>
-<div *ngFor="let proyecto of proyectosData; let i = index">
-  <div class="col-md-12 col-xs-12" *ngIf="pageId === i">
-    <div class="col-md-6 col-xs-12 show-info">
-      <img class="col-md-12" src="{{proyecto.planoSrc}}" alt="pano de una casa">
-      <div class="hiden-info">
-        <p>
-          {{proyecto.firsText}}
-        </p>
-        <p>{{proyecto.secondText}}</p>
+<div *ngIf="pageSection === 'proyectos'" class="col-md-12 col-xs-12">
+  <div class="col-md-12 col-xs-12">
+    <ul class="pagination center-pagination">
+      <li *ngFor="let paginationItem of proyectosData; let i = index">
+        <span [ngClass]="{'active' : i === pageId}" class="cursor" (click)="setFolder(i)">{{i + 1}}</span>
+      </li>
+    </ul>
+  </div>
+  <div *ngFor="let proyecto of proyectosData; let i = index">
+    <div class="col-md-12 col-xs-12" *ngIf="pageId === i">
+      <div class="col-md-6 col-xs-12 show-info">
+        <img class="col-md-12 col-xs-12" src="{{proyecto.planoSrc}}" alt="pano de una casa">
+        <div class="hiden-info">
+          <p>
+            {{proyecto.firsText}}
+          </p>
+          <p>{{proyecto.secondText}}</p>
+        </div>
       </div>
+      <carousel class="col-md-6 col-xs-12" [items]="proyecto.imagesSource"></carousel>
     </div>
-    <carousel class="col-md-6 col-xs-12" [items]="proyecto.imagesSource"></carousel>
+  </div>
+</div>
+<div *ngIf="pageSection === 'casa-propia'" class="col-md-12 col-xs-12">
+  <img class="col-md-4 col-xs-12" src="../assets/img/casa-propia/detalle-muros-exteriores.jpg" alt="detalles de los ladrillos que se usan para la construccion">
+  <div class="col-md-8 col-xs-12 empresa-holder">
+    <h4>Construccion Tradicional</h4>
+    <p>
+      Construimos con materiales tradicionales, nobles y de primera calidad: Muros de mamposteria de ladrillos comunes o
+      de ladrillos de ceramicos huecos, dobles, con camara de aire, camara aisladora intermedia y armaduras de hierro.
+      Terminaciones de excelente calidad a eleccion del propietario. Todas las instalaciones incluidas.
+    </p>
+  </div>
+  <div class="col-md-12 col-xs-12" *ngFor="let item of casasData">
+    <img *ngFor="let img of item.imagesSource" src="{{img.img}}" alt="casa" class="col-md-4 col-xs-4">
   </div>
 </div>

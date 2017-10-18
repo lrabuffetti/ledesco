@@ -4,7 +4,7 @@ import { CarouselItem } from '../carousel-item';
 @Component({
   selector: 'carousel',
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.css']
+  styleUrls: ['./carousel.component.css','../app.component.css']
 })
 export class CarouselComponent implements OnInit {
 

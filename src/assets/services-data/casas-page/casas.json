@@ -1,0 +1,45 @@
+[{
+  "imagesSource": [{
+      "img": "../../assets/img/casa-propia/casa-3-k/1.jpg"
+    },
+    {
+      "img": "../../assets/img/casa-propia/casa-3-k/2.jpg"
+    },
+    {
+      "img": "../../assets/img/casa-propia/casa-3-k/3.jpg"
+    }
+  ]
+}, {
+  "imagesSource": [{
+      "img": "../../assets/img/casa-propia/casa-12-g/1.jpg"
+    },
+    {
+      "img": "../../assets/img/casa-propia/casa-12-g/2.jpg"
+    },
+    {
+      "img": "../../assets/img/casa-propia/casa-12-g/3.jpg"
+    }
+  ]
+}, {
+  "imagesSource": [{
+      "img": "../../assets/img/casa-propia/casa-27-k/1.jpg"
+    },
+    {
+      "img": "../../assets/img/casa-propia/casa-27-k/2.jpg"
+    },
+    {
+      "img": "../../assets/img/casa-propia/casa-27-k/3.jpg"
+    }
+  ]
+}, {
+  "imagesSource": [{
+      "img": "../../assets/img/casa-propia/complejo-roche/1.jpg"
+    },
+    {
+      "img": "../../assets/img/casa-propia/complejo-roche/2.jpg"
+    },
+    {
+      "img": "../../assets/img/casa-propia/complejo-roche/3.jpg"
+    }
+  ]
+}]

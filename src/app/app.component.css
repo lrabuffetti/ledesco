@@ -10,8 +10,16 @@
 
 footer {
   background-color: #253b48;
-  height: 25px;
+  height: 15px;
 }
+
+.empresa-holder {
+  color: #FFF;
+  background-color: #5c7157;
+  min-height: 174px;
+  padding-top: 25px;
+}
+
 
 /**
  * for mobile devices
@@ -25,16 +33,24 @@ footer {
   .main-content-holder {
     border: none;
   }
-  .financiacion-holder {
+  .financiacion-holder, .compromiso-holder {
     display: none;
   }
   .navigation-list {
     display: block;
+    margin: 0;
   }
   .navigation-list li {
     display: block;
     float: left;
     width: 100%;
     text-align: left;
+  }
+  .center-pagination {
+    width: 60%;
+  }
+  .show-info {
+    width: 90%;
+    margin-bottom: 20px;
   }
 }
