@@ -1,3 +1,44 @@
-<p>
-  contact works!
-</p>
+<div class="col-md-12 col-xs-12">
+  <h4>formulario de contacto</h4> {{diagnostic}}
+  <form class="col-md-8 col-xs-12" #contactForm="ngForm">
+    <div class="col-md-6 col-xs-12">
+      <div class="form-group">
+        <label for="name">nombre</label>
+        <input placeholder="{{contactModel.name}}" [(ngModel)]="contactModel.name" [ngModelOptions]="{standalone: true}" #name="ngModel" type="text" class="form-control" id="name" required>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          el nombre es obligatorio
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mail">email</label>
+        <input placeholder="{{contactModel.mail}}" [(ngModel)]="contactModel.mail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [ngModelOptions]="{standalone: true}" #mail="ngModel" type="text" class="form-control" id="mail" required>
+        <div *ngIf="mail.invalid && (mail.dirty || mail.touched)" class="alert alert-danger">
+          el email es obligatorio o invalido
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="telefono">telefono</label>
+        <input placeholder="{{contactModel.telefono}}" [(ngModel)]="contactModel.telefono" pattern="[0-9]*" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="telefono" #telefono="ngModel" required>
+        <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="alert alert-danger">
+          el telefono es obligatorio o invalido
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <div class="form-group">
+        <label for="interes">interes</label>
+        <select [(ngModel)]="contactModel.interes" [ngModelOptions]="{standalone: true}" class="form-control" id="interes">
+          <option *ngFor="let int of intereses" [value]="int">{{int}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="consulta">consulta</label>
+        <textarea placeholder="{{contactModel.consulta}}" [(ngModel)]="contactModel.consulta" [ngModelOptions]="{standalone: true}" #consulta="ngModel" class="form-control" name="consulta" rows="5" cols="80" id="consulta" required></textarea>
+        <div *ngIf="consulta.invalid && (consulta.dirty || consulta.touched)" class="alert alert-danger">
+          este campo es obligatorio
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">enviar</button>
+  </form>
+</div>

@@ -10,7 +10,13 @@
 
 footer {
   background-color: #253b48;
-  height: 15px;
+  height: 20px;
+  text-align: right;
+  color: #fff;
+}
+
+footer small a {
+  color: #fff;
 }
 
 .empresa-holder {

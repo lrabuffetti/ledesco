@@ -21,7 +21,7 @@
     </div>
   </div>
 </div>
-<div *ngIf="pageSection === 'casa-propia'" class="col-md-12 col-xs-12">
+<div *ngIf="pageSection !== 'proyectos'" class="col-md-12 col-xs-12">
   <img class="col-md-4 col-xs-12" src="../assets/img/casa-propia/detalle-muros-exteriores.jpg" alt="detalles de los ladrillos que se usan para la construccion">
   <div class="col-md-8 col-xs-12 empresa-holder">
     <h4>Construccion Tradicional</h4>
@@ -31,7 +31,56 @@
       Terminaciones de excelente calidad a eleccion del propietario. Todas las instalaciones incluidas.
     </p>
   </div>
+</div>
+<div *ngIf="pageSection === 'casa-propia'" class="col-md-12 col-xs-12">
   <div class="col-md-12 col-xs-12" *ngFor="let item of casasData">
-    <img *ngFor="let img of item.imagesSource" src="{{img.img}}" alt="casa" class="col-md-4 col-xs-4">
+    <div class="col-md-4 col-xs-4" *ngFor="let img of item.imagesSource">
+      <div class="thumbnail">
+        <img class="img-responsive" src="{{img.img}}" alt="casa">
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="pageSection === 'barrio'" class="col-md-12 col-xs-12">
+  <div class="col-md-12 col-xs-12">
+    <div class="col-md-4 col-xs-4">
+      <div class="thumbnail">
+        <img class="img-responsive" src="../../assets/img/barrios/1.jpg" alt="casa">
+      </div>
+    </div>
+    <div class="col-md-4 col-xs-4">
+      <div class="thumbnail">
+        <img class="img-responsive" src="../../assets/img/barrios/2.jpg" alt="casa">
+      </div>
+    </div>
+    <div class="col-md-4 col-xs-4">
+      <div class="thumbnail">
+        <img class="img-responsive" src="../../assets/img/barrios/3.jpg" alt="casa">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-xs-12">
+    <div class="col-md-9 col-xs-6">
+      <div class="thumbnail">
+        <img class="img-responsive" src="../../assets/img/barrios/4.jpg" alt="casa">
+      </div>
+    </div>
+    <div class="col-md-3 col-xs-6">
+      <div class="thumbnail">
+        <img class="img-responsive" src="../../assets/img/barrios/5.jpg" alt="casa">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-xs-12">
+    <div class="col-md-9 col-xs-6">
+      <div class="thumbnail">
+        <img class="img-responsive" src="../../assets/img/barrios/6.jpg" alt="casa">
+      </div>
+    </div>
+    <div class="col-md-3 col-xs-6">
+      <div class="thumbnail">
+        <img class="img-responsive" src="../../assets/img/barrios/7.jpg" alt="casa">
+      </div>
+    </div>
   </div>
 </div>

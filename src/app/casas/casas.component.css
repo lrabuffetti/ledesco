@@ -35,3 +35,8 @@
   background-color: #eee;
   border-color: #ddd;
 }
+
+.thumbnail {
+  overflow: hidden;
+  height: 230px;
+}
