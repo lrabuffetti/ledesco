@@ -12,7 +12,10 @@ export class ContactComponent implements OnInit {
   intereses = ['interes de la consulta', 'construccion', 'casas', 'barrios', 'presupuestos'];
   contactModel = new Contact('nombre', 'tu@correo.com', 'numero de telefono', 'interes de la consulta', 'su consulta');
   submitted = false;
-  onSubmit() { this.submitted = true; }
+  onSubmit(contactInformation) {
+    console.log(contactInformation); 
+    this.submitted = true;
+  }
 
   constructor() { }
 

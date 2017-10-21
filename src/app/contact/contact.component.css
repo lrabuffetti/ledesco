@@ -4,3 +4,10 @@
   padding: 8px;
   text-transform: capitalize;
 }
+
+.information-holder {
+  background-color: #5c7157;
+  color: white;
+  min-height: 260px;
+  border-radius: 5px;
+}

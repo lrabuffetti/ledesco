@@ -1,6 +1,6 @@
 <div class="col-md-12 col-xs-12">
-  <h4>formulario de contacto</h4> {{diagnostic}}
-  <form class="col-md-8 col-xs-12" #contactForm="ngForm">
+  <form class="col-md-8 col-xs-12" #contactForm="ngForm" (submit)="onSubmit(contactModel)">
+    <h4>formulario de contacto</h4>
     <div class="col-md-6 col-xs-12">
       <div class="form-group">
         <label for="name">nombre</label>
@@ -41,4 +41,11 @@
     </div>
     <button type="submit" class="btn btn-success">enviar</button>
   </form>
+  <div class="col-md-4 col-xs-12 information-holder">
+    <h3>Informacion de contacto</h3>
+    <p>Tambien puede contactarse personalmente con nosotros pasando por nuestras oficinas o llamando por telefono.</p>
+    <p>25 de Junio 167 - Paraná - Entre Ríos</p>
+    <p>Lunes - Miércoles-Viernes 9:00 hs. a 16.30 hs.</p>
+    <p>Tel: (0343) 4267453 - (0343) 154 669606</p>
+  </div>
 </div>
