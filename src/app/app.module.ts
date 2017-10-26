@@ -18,6 +18,7 @@ import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { CasasServiceService } from './casas/casas-service.service';
+import { ContactServiceService } from './contact/contact-service.service'
 
 import { AppRoutingModule } from './app-routing'
 
@@ -44,6 +45,7 @@ import { AppRoutingModule } from './app-routing'
   ],
   providers: [
     CasasServiceService,
+    ContactServiceService,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,48 +1,44 @@
 <?php
+  header('Content-type: application/json');
 
-header('Content-type: application/json');
+  $errors = '';
 
-$errors = '';
+  if (empty($errors)) {
+      $postdata = file_get_contents("php://input");
+      $request = json_decode($postdata);
 
-if(empty($errors))
-{
+      $from_email = $request->email;
+      $message = $request->message;
+      $from_name = $request->name;
 
-	$postdata = file_get_contents("php://input");
-	$request = json_decode($postdata);
+      $to_email = $from_email;
 
-	$from_email = $request->email;
-	$message = $request->message;
-	$from_name = $request->name;
+      $contact = "<p><strong>Name:</strong> $from_name</p>
+  							<p><strong>Email:</strong> $from_email</p>";
+      $content = "<p>$message</p>";
 
-	$to_email = $from_email;
+      $website = 'Angular Php Email Example';
+      $email_subject = "$website: Neue Nachricht von $from_name erhalten";
 
-	$contact = "<p><strong>Name:</strong> $from_name</p>
-							<p><strong>Email:</strong> $from_email</p>";
-	$content = "<p>$message</p>";
+      $email_body = '<html><body>';
+      $email_body .= "$contact $content";
+      $email_body .= '</body></html>';
 
-	$website = 'Angular Php Email Example';
-	$email_subject = "$website: Neue Nachricht von $from_name erhalten";
+      $headers .= "MIME-Version: 1.0\r\n";
+      $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+      $headers .= "From: $from_email\n";
+      $headers .= "Reply-To: $from_email";
 
-	$email_body = '<html><body>';
-	$email_body .= "$contact $content";
-	$email_body .= '</body></html>';
+      mail($to_email, $email_subject, $email_body, $headers);
 
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-	$headers .= "From: $from_email\n";
-	$headers .= "Reply-To: $from_email";
-
-	mail($to_email,$email_subject,$email_body,$headers);
-
-	$response_array['status'] = 'success';
-	$response_array['from'] = $from_email;
-	echo json_encode($response_array);
-	echo json_encode($from_email);
-	header($response_array);
-	return $from_email;
-} else {
-	$response_array['status'] = 'error';
-	echo json_encode($response_array);
-	header('Location: /error.html');
-}
-?>
+      $response_array['status'] = 'success';
+      $response_array['from'] = $from_email;
+      echo json_encode($response_array);
+      echo json_encode($from_email);
+      header($response_array);
+      return $from_email;
+  } else {
+      $response_array['status'] = 'error';
+      echo json_encode($response_array);
+      header('Location: /error.html');
+  }
