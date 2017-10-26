@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Contact } from '../contact'
-import { ContactServiceService } from './contact-service.service'
 
 @Component({
   selector: 'app-contact',
@@ -10,19 +9,14 @@ import { ContactServiceService } from './contact-service.service'
 })
 export class ContactComponent implements OnInit {
 
-  intereses = ['interes de la consulta', 'construccion', 'casas', 'barrios', 'presupuestos'];
-  contactModel = new Contact('nombre', 'tu@correo.com', 'numero de telefono', 'interes de la consulta', 'su consulta');
+  intereses = ['construccion', 'casas', 'barrios', 'presupuestos'];
+  contactModel = new Contact('', '', '', '', '');
   submitted = false;
+  onSubmit() { this.submitted = true; }
 
-  constructor(private contactServiceService: ContactServiceService) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  onSubmit(contactInformation) {
-    //console.log(contactInformation);
-    this.submitted = true;
-    this.contactServiceService.sendEmail(contactInformation);
   }
 
 }

@@ -8,30 +8,31 @@ import { CarouselItem } from '../carousel-item';
 })
 export class HomePageComponent implements OnInit {
 
-  imagesSource: CarouselItem[] = [
-    {
-      imgSrc: '../assets/img/home/1.jpg'
-    },
-    {
-      imgSrc: '../assets/img/home/2.jpg'
-    },
-    {
-      imgSrc: '../assets/img/home/3.jpg'
-    },
-    {
-      imgSrc: '../assets/img/home/4.jpg'
-    },
-    {
-      imgSrc: '../assets/img/home/5.jpg'
-    },
-    {
-      imgSrc: '../assets/img/home/6.jpg'
-    },
-  ]
+  imagesSource = []
 
   constructor() { }
 
   ngOnInit() {
+    this.imagesSource = [
+      {
+        imgSrc: '../assets/img/home/1.jpg'
+      },
+      {
+        imgSrc: '../assets/img/home/2.jpg'
+      },
+      {
+        imgSrc: '../assets/img/home/3.jpg'
+      },
+      {
+        imgSrc: '../assets/img/home/4.jpg'
+      },
+      {
+        imgSrc: '../assets/img/home/5.jpg'
+      },
+      {
+        imgSrc: '../assets/img/home/6.jpg'
+      },
+    ]
   }
 
 }

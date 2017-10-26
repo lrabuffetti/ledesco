@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'faqs', component: FaqsComponent },
   { path: 'ubicacion', component: UbicacionComponent },
   { path: 'contacto', component: ContactComponent },
+  { path: '**', component: HomePageComponent }
 ];
 
 @NgModule({
