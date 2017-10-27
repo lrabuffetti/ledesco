@@ -19,7 +19,7 @@ export class NavigationVarComponent implements OnInit {
   navigationItems: NavItem[] = [
     {
       title: 'inicio',
-      link: '',
+      link: '/',
       search_id: 'inicio, home'
     },
     {
