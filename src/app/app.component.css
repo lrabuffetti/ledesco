@@ -60,4 +60,8 @@ footer small a {
     width: 90%;
     margin-bottom: 20px;
   }
+
+  .information-holder {
+    margin-top: 20px;
+  }
 }
