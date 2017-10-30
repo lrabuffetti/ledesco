@@ -1,6 +1,7 @@
 .page-holder {
   width: 90%;
   margin: 20px auto;
+  font-family: 'Roboto', sans-serif;
 }
 
 .main-content-holder {
@@ -27,12 +28,11 @@ footer small a {
   padding-top: 25px;
 }
 
-
 /**
  * for mobile devices
  */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
   .vertical-divider {
     border-right: none;
     border-bottom: 1px solid #FFF;
@@ -40,7 +40,7 @@ footer small a {
   .main-content-holder {
     border: none;
   }
-  .financiacion-holder, .compromiso-holder {
+  .financiacion-holder, .compromiso-holder, .faqs-bar, .light-green-back {
     display: none;
   }
   .navigation-list {

@@ -10,9 +10,20 @@ import { Contact } from '../contact'
 export class ContactComponent implements OnInit {
 
   intereses = ['construccion', 'casas', 'barrios', 'presupuestos'];
-  contactModel = new Contact('', '', '', '', '');
+  contactModel = new Contact(
+    'Su nombre',
+    'su@email.com',
+    'numero de telefono',
+    '',
+    'Su consulta'
+  );
   submitted = false;
+
   onSubmit() { this.submitted = true; }
+
+  onChange(event) {
+    this.contactModel.interes = event
+  }
 
   constructor() { }
 

@@ -1,3 +1,8 @@
-<p>
-  ubicacion works!
-</p>
+<div class="col-md-12 col-xs-12">
+  <agm-map
+    [latitude]="lat"
+    [longitude]="lng"
+    [zoom]="zoom">
+     <agm-marker [latitude]="officeLat" [longitude]="officeLng"></agm-marker>
+  </agm-map>
+</div>

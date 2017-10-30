@@ -20,6 +20,8 @@ import { ContactComponent } from './contact/contact.component';
 import { CasasServiceService } from './casas/casas-service.service';
 import { ContactServiceService } from './contact/contact-service.service'
 
+import { AgmCoreModule } from '@agm/core';
+
 import { AppRoutingModule } from './app-routing'
 
 @NgModule({
@@ -42,6 +44,9 @@ import { AppRoutingModule } from './app-routing'
     CommonModule,
     HttpModule,
     FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDJZbeVwDK5RQxgrR3yDjJ0Ex2QgcdFrm8'
+    }),
   ],
   providers: [
     CasasServiceService,
