@@ -4,8 +4,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CasasServiceService {
-  url = 'http://localhost:4200/assets/services-data/casas-page/proyectos.json';
-  urlC = 'http://localhost:4200/assets/services-data/casas-page/casas.json';
+  url = '../../assets/services-data/casas-page/proyectos.json';
+  urlC = '../../assets/services-data/casas-page/casas.json';
   data = '';
 
   constructor(private http: Http) { }

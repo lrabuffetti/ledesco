@@ -1,3 +1,5 @@
 export class CarouselItem {
-  imgSrc: String;
+  constructor(
+    public imgSrc: String
+  ) { }
 }
