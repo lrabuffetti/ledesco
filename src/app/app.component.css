@@ -21,6 +21,10 @@ footer small a {
   color: #fff;
 }
 
+.mgb-20 {
+  margin-bottom: 20px;
+}
+
 .empresa-holder {
   color: #FFF;
   background-color: #5c7157;
@@ -63,5 +67,9 @@ footer small a {
 
   .information-holder {
     margin-top: 20px;
+  }
+
+  .thumbnail {
+    height: auto;
   }
 }
