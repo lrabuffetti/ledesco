@@ -19,6 +19,9 @@
     },
     {
       "imgSrc": "../../assets/img/proyectos/2/imagen_2.jpg"
+    },
+    {
+      "imgSrc": "../../assets/img/proyectos/2/imagen_2.jpg"
     }
   ],
   "firsText": "Ofrecemos lotes de diferentes dimensiones que permita desarrollar la vida al aire libre con todo lo que ello implica. Proyectamos casas desde dos dormitorios con estilo y diseños personalizados, adaptadas al gusto y necesidades de nuestros clientes.",
@@ -30,16 +33,23 @@
     },
     {
       "imgSrc": "../../assets/img/proyectos/3/imagen_2.jpg"
-    },
-    {
-      "imgSrc": "../../assets/img/proyectos/3/imagen_3.jpg"
     }
   ],
   "firsText": "Ofrecemos lotes de diferentes dimensiones que permita desarrollar la vida al aire libre con todo lo que ello implica. Proyectamos casas desde dos dormitorios con estilo y diseños personalizados, adaptadas al gusto y necesidades de nuestros clientes.",
   "secondText": "Priorizamos el modo de vida adaptando orientación, materiales y elementos de la mejor manera para que el propietario se sienta identificado."
 }, {
   "planoSrc": "../../assets/img/proyectos/4/plano.jpg",
-  "imagesSource": [],
+  "imagesSource": [
+    {
+        "imgSrc": "../../assets/img/proyectos/4/imagen_1.jpg"
+      },
+      {
+        "imgSrc": "../../assets/img/proyectos/4/imagen_2.jpg"
+      },
+      {
+        "imgSrc": "../../assets/img/proyectos/4/imagen_2.jpg"
+      }
+  ],
   "firsText": "Ofrecemos lotes de diferentes dimensiones que permita desarrollar la vida al aire libre con todo lo que ello implica. Proyectamos casas desde dos dormitorios con estilo y diseños personalizados, adaptadas al gusto y necesidades de nuestros clientes.",
   "secondText": "Priorizamos el modo de vida adaptando orientación, materiales y elementos de la mejor manera para que el propietario se sienta identificado."
 }]

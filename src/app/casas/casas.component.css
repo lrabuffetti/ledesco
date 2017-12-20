@@ -2,20 +2,13 @@
   position: relative;
 }
 
-.show-info .hiden-info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.hiden-info {
   min-height: 200px;
   background-color: #51626d;
   opacity: 0.9;
   color: #FFF;
   padding: 10px;
-  display: none;
-}
-
-.show-info:hover .hiden-info {
-  display: block;
+  margin-top: 20px;
 }
 
 .center-pagination {
@@ -39,4 +32,12 @@
 .thumbnail {
   overflow: hidden;
   height: 230px;
+}
+
+.parana-separator {
+  background-image: url('../../assets/img/barrios/barra.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 230px;
+  background-position-x: center;
 }

@@ -10,6 +10,9 @@
     <div class="col-md-12 col-xs-12" *ngIf="pageId === i">
       <div class="col-md-6 col-xs-12 show-info">
         <img class="col-md-12 col-xs-12" src="{{proyecto.planoSrc}}" alt="pano de una casa">
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <carousel [items]="proyecto.imagesSource"></carousel>
         <div class="hiden-info">
           <p>
             {{proyecto.firsText}}
@@ -17,7 +20,6 @@
           <p>{{proyecto.secondText}}</p>
         </div>
       </div>
-      <carousel class="col-md-6 col-xs-12" [items]="proyecto.imagesSource"></carousel>
     </div>
   </div>
 </div>
@@ -33,7 +35,7 @@
 </div>
 <!-- Barrios section -->
 <div *ngIf="pageSection === 'barrio'" class="col-md-12 col-xs-12">
-  <div class="col-md-12">
+  <div class="col-md-12 mgb-20">
     <div class="empresa-holder col-md-11 pull-right">
       <p>
         Comprar una casa en Desarrollos Ledesco es una excelente opción para la casa propia ya que permite evitar alquileres cada vez más onerosos y también resulta una inversión segura y rentable que permite resguardar el patrimonio familiar de la inflación o de los vaivenes monetarios.
@@ -46,7 +48,8 @@
     </div>
   </div>
   <div class="col-md-12 col-xs-12">
-    <div class="col-md-4 col-xs-4">
+    <div class="col-md-1 col-xs-1 parana-separator"></div>
+    <div class="col-md-3 col-xs-3">
       <div class="thumbnail">
         <img class="img-responsive" src="../../assets/img/barrios/1.jpg" alt="casa">
       </div>
