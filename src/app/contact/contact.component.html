@@ -13,14 +13,14 @@
         <label for="mail">email</label>
         <input placeholder="{{contactModel.mail}}" [(ngModel)]="contactModel.mail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [ngModelOptions]="{standalone: true}" #mail="ngModel" type="text" class="form-control" id="mail" required>
         <div *ngIf="mail.invalid && (mail.dirty || mail.touched)" class="alert alert-danger">
-          el email es obligatorio o invalido
+          el email es obligatorio o inválido
         </div>
       </div>
       <div class="form-group">
-        <label for="telefono">telefono</label>
+        <label for="telefono">teléfono</label>
         <input placeholder="{{contactModel.telefono}}" [(ngModel)]="contactModel.telefono" pattern="[0-9]*" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="telefono" #telefono="ngModel" required>
         <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="alert alert-danger">
-          el telefono es obligatorio o invalido
+          el teléfono es obligatorio o inválido
         </div>
       </div>
     </div>
@@ -42,10 +42,10 @@
     <button type="submit" class="btn btn-success">enviar</button>
   </form>
   <div class="col-md-4 col-xs-12 information-holder">
-    <h3>Informacion de contacto</h3>
-    <p>Tambien puede contactarse personalmente con nosotros pasando por nuestras oficinas o llamando por telefono.</p>
+    <h3>Información de contacto</h3>
+    <p>También puede contactarse personalmente con nosotros pasando por nuestras oficinas o llamando por teléfono.</p>
     <p>25 de Junio 167 - Paraná - Entre Ríos</p>
-    <p>Lunes - Miércoles-Viernes 9:00 hs. a 16.30 hs.</p>
+    <p>Lunes - Miércoles - Viernes 9:00 hs. a 16.30 hs.</p>
     <p>Tel: (0343) 4267453 - (0343) 154 669606</p>
   </div>
 </div>

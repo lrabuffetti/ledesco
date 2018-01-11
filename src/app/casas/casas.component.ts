@@ -10,9 +10,9 @@ import { CasasServiceService } from './casas-service.service'
 })
 export class CasasComponent implements OnInit {
   pageId = 0;
-  proyectosData: any;
-  pageSection = ''
-  casasData: any;
+  proyectosData: any = {};
+  pageSection = '';
+  casasData: any = {};
 
   setFolder(index) {
     this.pageId = index;

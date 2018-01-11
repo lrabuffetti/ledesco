@@ -21,9 +21,6 @@ export class HomePageComponent implements OnInit {
         imgSrc: '../assets/img/home/2.jpg'
       },
       {
-        imgSrc: '../assets/img/home/3.jpg'
-      },
-      {
         imgSrc: '../assets/img/home/4.jpg'
       },
       {

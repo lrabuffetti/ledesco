@@ -1,14 +1,14 @@
 .light-green-back {
   background-color: #4d654a;
   border-radius: 5px 0 0 5px;
-  min-height: 955px;
+  min-height: 1207px;
 }
 
 .faqs-holder {
   background-color: #0D3C48;
   border-radius: 0 5px 5px 0;
   color: #FFF;
-  padding: 20px;
+  padding: 0;
 }
 
 .faqs-holder h4 {
@@ -21,4 +21,9 @@
   background-size: contain;
   height: 500px;
   background-position-x: 90%;
+}
+
+.question-background {
+  background-color: #186174;
+  padding: 10px;
 }
