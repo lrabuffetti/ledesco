@@ -2,7 +2,11 @@
   position: relative;
 }
 
-.show-info .hiden-info {
+.carousel-height {
+  height: 933px;
+}
+
+.carousel-height .hiden-info {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -12,10 +16,6 @@
   color: #FFF;
   padding: 10px;
   display: none;
-}
-
-.show-info:hover .hiden-info {
-  display: block;
 }
 
 .center-pagination {

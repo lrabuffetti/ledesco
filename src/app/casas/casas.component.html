@@ -6,18 +6,18 @@
       </li>
     </ul>
   </div>
-  <div *ngFor="let proyecto of proyectosData; let i = index">
+  <div *ngFor="let proyecto of proyectosData; let i = index" class="col-md-12 col-xs-12">
     <div class="col-md-12 col-xs-12" *ngIf="pageId === i">
-      <div class="col-md-6 col-xs-12 show-info">
-        <img class="col-md-12 col-xs-12" src="{{proyecto.planoSrc}}" alt="pano de una casa">
-        <div class="hiden-info">
-          <p>
-            {{proyecto.firsText}}
-          </p>
+      <div class="col-md-6 col-xs-12" (mouseenter)="getDisplay('hover')" (mouseleave)="getDisplay('leave')">
+        <img class="col-md-12 col-xs-12 img-hover img-responsive" src="{{proyecto.planoSrc}}" alt="plano de una casa">
+      </div>
+      <div class="col-md-6 col-xs-12 carousel-height">
+        <carousel [items]="proyecto.imagesSource"></carousel>
+        <div class="hiden-info" [ngStyle]="{'display':displaySetting}">
+          <p>{{proyecto.firsText}}</p>
           <p>{{proyecto.secondText}}</p>
         </div>
       </div>
-      <carousel class="col-md-6 col-xs-12" [items]="proyecto.imagesSource"></carousel>
     </div>
   </div>
 </div>
@@ -26,9 +26,8 @@
   <div class="col-md-8 col-xs-12 empresa-holder">
     <h4>Construcción Tradicional</h4>
     <p>
-      Construimos con materiales tradicionales, nobles y de primera calidad: Muros de mamposteria de ladrillos comunes o
-      de ladrillos de ceramicos huecos, dobles, con camara de aire, camara aisladora intermedia y armaduras de hierro.
-      Terminaciones de excelente calidad a eleccion del propietario. Todas las instalaciones incluidas.
+      Construimos con materiales tradicionales, nobles y de primera calidad: Muros de mamposteria de ladrillos comunes o de ladrillos de ceramicos huecos, dobles, con camara de aire, camara aisladora intermedia y armaduras de hierro. Terminaciones de excelente
+      calidad a eleccion del propietario. Todas las instalaciones incluidas.
     </p>
   </div>
 </div>
@@ -36,7 +35,7 @@
   <div class="col-md-12 col-xs-12" *ngFor="let item of casasData">
     <div class="col-md-4 col-xs-4" *ngFor="let img of item.imagesSource">
       <div class="thumbnail">
-        <img class="img-responsive" src="{{img.img}}" alt="casa">
+        <img class="img-responsive cursor" src="{{img.img}}" alt="casa" (click)="openImage(img.img)">
       </div>
     </div>
   </div>
@@ -84,3 +83,19 @@
     </div>
   </div>
 </div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+    <img src="{{content}}" alt="imagen de la casa ampliada">
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>

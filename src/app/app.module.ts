@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FormsModule }   from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -48,6 +49,7 @@ import { AppRoutingModule } from './app-routing'
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJZbeVwDK5RQxgrR3yDjJ0Ex2QgcdFrm8'
     }),
+    NgbModule.forRoot(),
   ],
   providers: [
     CasasServiceService,

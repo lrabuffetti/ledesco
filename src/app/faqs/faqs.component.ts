@@ -10,6 +10,10 @@ export class FaqsComponent implements OnInit {
 
   public faqs = [];
 
+  public customCss(customStyle) {
+    return customStyle ? 'question-background' : 'question-padding';
+  }
+
   constructor(private faqsService: FaqsService) { }
 
   ngOnInit() {

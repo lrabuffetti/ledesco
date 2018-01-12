@@ -1,9 +1,9 @@
 <div class="col-md-12 col-xs-12">
   <div class="col-md-1 light-green-back"></div>
   <div class="col-md-10 col-xs-12 faqs-holder">
-    <div *ngFor="let faq of faqs; let i = index; let odd = odd" [ngClass]="{'question-background' : odd === false}">
+    <div *ngFor="let faq of faqs; let i = index; let odd = odd" [ngClass]="customCss(odd)">
       <h4>{{faq.question}}</h4>
-      <p>{{faq.answer}} {{odd | json}} </p>
+      <p>{{faq.answer}}</p>
     </div>
   </div>
   <div class="col-md-1 faqs-bar"></div>
