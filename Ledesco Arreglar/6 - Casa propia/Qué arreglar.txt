@@ -1,2 +1,0 @@
--Al clickear la imagen, que se pueda ampliar.
--Que después de ampliar, se pueda volver a "Casa Propia".

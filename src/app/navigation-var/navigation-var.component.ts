@@ -33,7 +33,7 @@ export class NavigationVarComponent implements OnInit {
       search_id: 'casas, modelos, construcciones, planos, ejemplos, viviendas, barrios',
     },
     {
-      title: 'financiacion',
+      title: 'financiación',
       link: '/financiacion',
       search_id: 'financiacion, precios, pagos, metodos, bancos, creditos'
     },
@@ -43,7 +43,7 @@ export class NavigationVarComponent implements OnInit {
       search_id: 'preguntas, frecuentes, dudas, faqs'
     },
     {
-      title: 'ubicacion',
+      title: 'ubicación',
       link: '/ubicacion',
       search_id: 'ubicacion, direccion, donde, estamos'
     },

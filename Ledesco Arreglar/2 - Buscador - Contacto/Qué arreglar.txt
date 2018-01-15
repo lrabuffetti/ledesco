@@ -1,2 +1,0 @@
--Que todas las consultas y mails vayan a la casilla que figura en la página
--Cada vez que alguien envíe una consulta, que aparezca el mensaje "Mensaje enviado exitosamente. Será respondido a la brevedad"

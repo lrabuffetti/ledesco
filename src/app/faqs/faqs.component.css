@@ -1,7 +1,8 @@
 .light-green-back {
   background-color: #4d654a;
   border-radius: 5px 0 0 5px;
-  min-height: 955px;
+  height: fit-content;
+  min-height: 1355px;
 }
 
 .faqs-holder {
@@ -23,10 +24,11 @@
   background-position-x: 90%;
 }
 
-.question-separator {
-  background-color: #006376;
+.question-background {
+  background-color: #186174;
+  padding: 10px;
 }
 
-.pad-20 {
+.question-padding {
   padding: 10px;
 }

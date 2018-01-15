@@ -10,15 +10,36 @@ import { CasasServiceService } from './casas-service.service'
 })
 export class CasasComponent implements OnInit {
   pageId = 0;
-  proyectosData: any;
-  pageSection = ''
-  casasData: any;
+  proyectosData: object = {};
+  pageSection = '';
+  casasData: object = {};
+  barriosData: object = {}
+  displaySetting: string = 'none';
+  closeResult: string = '';
+  showBigImage: boolean = false;
+  mainImage: string = '';
 
   setFolder(index) {
     this.pageId = index;
   }
 
-  constructor(private activatedRoute: ActivatedRoute, private casasServiceService: CasasServiceService) { }
+  getDisplay(displayOption) {
+    return displayOption === 'hover' ? this.displaySetting = 'block' : this.displaySetting = 'none';
+  }
+
+  openImage(imgSrc) {
+    this.showBigImage = true;
+    this.mainImage = imgSrc;
+  }
+
+  closeImage() {
+    this.showBigImage = false;
+    this.mainImage = '';
+  }
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private casasServiceService: CasasServiceService) { }
 
   ngOnInit() {
     this.pageSection = this.activatedRoute.snapshot.params.id;
@@ -29,10 +50,16 @@ export class CasasComponent implements OnInit {
         }
       );
     }
-    if (this.activatedRoute.snapshot.params.id === 'casa-propia') {
+    else if (this.activatedRoute.snapshot.params.id === 'casa-propia') {
       this.casasServiceService.getCasas().subscribe(
         data => {
           this.casasData = data;
+        }
+      );
+    } else {
+      this.casasServiceService.getBarrios().subscribe(
+        data => {
+          this.barriosData = data;
         }
       );
     }

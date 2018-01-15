@@ -2,13 +2,20 @@
   position: relative;
 }
 
-.hiden-info {
+.carousel-height {
+  height: 933px;
+}
+
+.carousel-height .hiden-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   min-height: 200px;
   background-color: #51626d;
   opacity: 0.9;
   color: #FFF;
   padding: 10px;
-  margin-top: 20px;
+  display: none;
 }
 
 .center-pagination {
@@ -40,4 +47,27 @@
   background-size: contain;
   height: 230px;
   background-position-x: center;
+}
+
+.main-image {
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 11;
+  left: 0;
+  background-color: #000;
+  padding: 50px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.main-image img {
+  width: 50%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.p-0 {
+  padding: 0;
 }

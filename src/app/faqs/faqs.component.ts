@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { FaqsService } from './faq-service.service';
 
 @Component({
   selector: 'app-faqs',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqsComponent implements OnInit {
 
-  constructor() { }
+  public faqs = [];
+  @ViewChild('mainScreen') elementView: ElementRef;
+  viewHeight: number;
+
+  public customCss(customStyle) {
+    return customStyle ? 'question-background' : 'question-padding';
+  }
+
+  constructor(private faqsService: FaqsService) { }
 
   ngOnInit() {
+    this.faqsService.getFaqs().subscribe(
+      data => {
+        this.faqs = data;
+      }
+    );
+
+    this.viewHeight = this.elementView.nativeElement.offsetHeight;
+    console.log(this.viewHeight);
   }
 
 }

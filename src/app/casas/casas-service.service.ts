@@ -6,7 +6,8 @@ import 'rxjs/add/operator/map';
 export class CasasServiceService {
   url = '../../assets/services-data/casas-page/proyectos.json';
   urlC = '../../assets/services-data/casas-page/casas.json';
-  data = '';
+  urlB = '../../assets/services-data/casas-page/barrios.json';
+  data = {};
 
   constructor(private http: Http) { }
 
@@ -20,6 +21,14 @@ export class CasasServiceService {
 
   getCasas() {
     return this.http.get(this.urlC)
+      .map(data => {
+        data.json();
+        return data.json();
+      });
+  }
+
+  getBarrios() {
+    return this.http.get(this.urlB)
       .map(data => {
         data.json();
         return data.json();

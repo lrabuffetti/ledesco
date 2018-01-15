@@ -18,7 +18,8 @@ import { UbicacionComponent } from './ubicacion/ubicacion.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { CasasServiceService } from './casas/casas-service.service';
-import { ContactServiceService } from './contact/contact-service.service'
+import { ContactServiceService } from './contact/contact-service.service';
+import { FaqsService } from './faqs/faq-service.service';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -51,6 +52,7 @@ import { AppRoutingModule } from './app-routing'
   providers: [
     CasasServiceService,
     ContactServiceService,
+    FaqsService,
   ],
   bootstrap: [AppComponent]
 })
