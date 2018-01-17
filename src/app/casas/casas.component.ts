@@ -10,10 +10,10 @@ import { CasasServiceService } from './casas-service.service'
 })
 export class CasasComponent implements OnInit {
   pageId = 0;
-  proyectosData: object = {};
+  proyectosData = [];
   pageSection = '';
-  casasData: object = {};
-  barriosData: object = {}
+  casasData = [];
+  barriosData = [];
   displaySetting: string = 'none';
   closeResult: string = '';
   showBigImage: boolean = false;
