@@ -1,5 +1,11 @@
 <div class="col-md-12 col-xs-12">
-  <form class="col-md-8 col-xs-12" #contactForm="ngForm" (submit)="onSubmit(contactModel)">
+  <div *ngIf="submitted" class="alert alert-success" role="alert">
+    El mail fue enviado correctamente, será contactado en breves.
+  </div>
+  <div *ngIf="notSubmitted" class="alert alert-danger" role="alert">
+    Hubo un error en el envío, pruebe devuelta en unos minutos por favor.
+  </div>
+  <form class="col-md-8 col-xs-12 form-classes" #contactForm="ngForm" (submit)="onSubmit(contactModel)">
     <h4>formulario de contacto</h4>
     <div class="col-md-6 col-xs-12">
       <div class="form-group">

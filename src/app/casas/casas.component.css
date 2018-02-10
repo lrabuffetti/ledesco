@@ -2,19 +2,23 @@
   position: relative;
 }
 
+carousel {
+  min-height: 400px;
+  display: block;
+}
+
 .carousel-height {
-  height: 933px;
+  height: 600px;
 }
 
 .carousel-height .hiden-info {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   min-height: 200px;
   background-color: #51626d;
   opacity: 0.9;
   color: #FFF;
   padding: 10px;
+  margin-top: 25px;
   display: none;
 }
 

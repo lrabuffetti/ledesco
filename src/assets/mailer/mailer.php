@@ -7,14 +7,18 @@
       $postdata = file_get_contents("php://input");
       $request = json_decode($postdata);
 
-      $from_email = $request->email;
-      $message = $request->message;
+      $from_email = $request->mail;
+      $message = $request->consulta;
       $from_name = $request->name;
+      $from_phone = $request->telefono;
+      $from_interes = $request->interes;
 
-      $to_email = $from_email;
+      $to_email = 'contacto@ledescoparana.com';
 
       $contact = "<p><strong>Name:</strong> $from_name</p>
-  							<p><strong>Email:</strong> $from_email</p>";
+  							<p><strong>Email:</strong> $from_email</p>
+                <p><strong>Phone:</strong> $from_phone</p>
+                <p><strong>interes:</strong> $from_interes</p>";
       $content = "<p>$message</p>";
 
       $website = 'Angular Php Email Example';
@@ -40,5 +44,5 @@
   } else {
       $response_array['status'] = 'error';
       echo json_encode($response_array);
-      header('Location: /error.html');
+      header('Location: /contacto');
   }

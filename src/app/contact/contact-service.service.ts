@@ -4,15 +4,15 @@ import { Observable } from 'rxjs/Observable';
 import { Resolve } from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { Contact } from '../contact';
 
 @Injectable()
 export class ContactServiceService {
-  private emailUrl = '/assets/email.php';
+  private emailUrl = '../../assets/mailer/mailer.php';
 
   constructor(private http: Http) { }
 
-  sendEmail(message) {
-    console.log(message, 'hjkhkjhkjhkhkjhkj', this.emailUrl);
+  sendEmail(message: Contact): Observable<Contact> | any {
     return this.http.post(this.emailUrl, message)
       .map(response => {
         console.log('Sending email was successfull', response);
