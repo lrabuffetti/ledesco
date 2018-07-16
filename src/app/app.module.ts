@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -22,8 +22,7 @@ import { ContactServiceService } from './contact/contact-service.service';
 import { FaqsService } from './faqs/faq-service.service';
 
 import { AgmCoreModule } from '@agm/core';
-
-import { AppRoutingModule } from './app-routing'
+import { AppRoutingModule } from './app-routing';
 
 @NgModule({
   declarations: [

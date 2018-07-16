@@ -16,13 +16,13 @@
       $to_email = 'contacto@ledescoparana.com';
 
       $contact = "<p><strong>Name:</strong> $from_name</p>
-  							<p><strong>Email:</strong> $from_email</p>
+  				<p><strong>Email:</strong> $from_email</p>
                 <p><strong>Phone:</strong> $from_phone</p>
                 <p><strong>interes:</strong> $from_interes</p>";
       $content = "<p>$message</p>";
 
-      $website = 'Angular Php Email Example';
-      $email_subject = "$website: Neue Nachricht von $from_name erhalten";
+      $website = 'Ledesco Parana';
+      $email_subject = "$website: Consulta $from_name web";
 
       $email_body = '<html><body>';
       $email_body .= "$contact $content";

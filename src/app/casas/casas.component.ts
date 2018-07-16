@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { CarouselItem } from '../carousel-item';
-import { CasasServiceService } from './casas-service.service'
+import { CasasServiceService } from './casas-service.service';
 
 @Component({
   selector: 'app-casas',
@@ -49,8 +49,7 @@ export class CasasComponent implements OnInit {
           this.proyectosData = data;
         }
       );
-    }
-    else if (this.activatedRoute.snapshot.params.id === 'casa-propia') {
+    } else if (this.activatedRoute.snapshot.params.id === 'casa-propia') {
       this.casasServiceService.getCasas().subscribe(
         data => {
           this.casasData = data;
