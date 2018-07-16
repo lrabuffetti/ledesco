@@ -30,7 +30,7 @@ export class ContactComponent implements OnInit {
     }, error => {
       this.notSubmitted = true;
       this.submitted = false;
-    })
+    });
   }
 
   ngOnInit() {
